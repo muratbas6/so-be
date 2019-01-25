@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>so-be!</title>
+</head>
+<body>
+    <h1>Merhaba! {{request.user.get_username}}</h1>
+    {% if user.is_authenticated %}
+    <h2>Canlı Aktiviteler</h2>
+    <ul>
+    <li>Basketbol Maçı!! Yeşilkent</li>
+    <li>Vadi Köpek Grubu</li>
+    <li>Kütüphaneye gelecek varmı? </li>
+    <li>7-8 Worldpointte halısahaya adam lazım.</li>
+    <li>Yarın akşam vadide aramızda gitar çalıcaz!</li>
+    </ul>
+    {% else %}
+    
+    <a href="/login">Giriş</a>
+    {% endif %}
+    
+</body>
+</html>
